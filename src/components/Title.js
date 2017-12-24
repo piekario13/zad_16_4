@@ -1,17 +1,11 @@
 import React from 'react';
+import style from '../containers/App.css';
 
-class Title extends React.Component {
-  constructor(props){
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-      <p>Witaj w {this.props.todoName}</p>
-      <p>Liczba zadań: {this.props.todoData.length}</p>
-      </div>
-    )
-  }
-}
+const Title = props => (
+	<div className={style.Title}>
+		<h1>{props.title}</h1>
+		<p>Nowych zadań: {props.added}</p>
+	</div>
+);
 
 export default Title;
