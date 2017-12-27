@@ -1,13 +1,11 @@
 import React from 'react';
-import style from './TodoList.css';
+import Todo from './Todo';
+import style from '../containers/App.css';
 
 const TodoList = props => (
-	<ul>
+	<ul className={style.TodoList}>
 		{props.data.map((item, index) =>
-			<li key={index}>
-				{item.text}
-				<button value={index} onClick={() => props.remove(item.id)}>x</button>
-			</li>
+			<Todo key={index} item={item} onClick={props.remove} />
 		)}
 	</ul>
 );

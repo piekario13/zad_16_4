@@ -1,16 +1,120 @@
-.TodoApp {
-    background-color: #F5F5F5;
-    color: #222;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|PT+Sans+Narrow');
+
+* {
+    box-sizing: border-box;
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.TodoContainer {
     align-items: center;
     align-content: center;
-    width: 100vw;
-    height: 100vh;
+    background-color: white;
+    color: #fff; ;
+    display: flex;
+    font-family: 'PT Sans Narrow', sans-serif;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.TodoApp {
+    background-color: #000;
+    min-width: 410px;
+    padding-top: 0;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.TodoList {
+    color: red;
+    font-family: 'Indie Flower', cursive;
+    padding: 20px 0 0 0;
+}
+
+.TodoItem {
+    height: 50px;
+    font-family: 'Indie Flower', cursive;
+    list-style-type: none;
+    line-height: 50px;
+    font-size: 30px;
+    margin: 10px 50px;
+    min-width: 250px;
+    padding: 0;
+    padding-left: 10px;
+    text-align: left;
+    transition: 1s;
+    
+}
+
+.TodoItem:hover {
+    background-color: #fff;
+}
+
+.TodoItem:hover .RemoveButton {
+    border: 1px solid red;
+    cursor: pointer;
 }
 
 .Title {
-    justify-content: flex-start;
-    text-align: center;
+    color: #fff;
+    font-size: 70px;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.RemoveButton {
+    background: none;
+    border: none;
+    color: red;
+    float: right;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    height: 50px;
+    padding: 0;
+    width: 50px;
+}
+
+.RemoveButton:hover {
+    background-color: red;
+    color: #fff;
+    height: 48px;
+}
+
+.AddButton {
+    border: 1px solid #fff;
+    color: red;
+    cursor: pointer;
+    font-size: 40px;
+    font-family: 'Indie Flower', cursive;
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+}
+
+.AddButton:hover {
+    background-color: #fff;
+    border-left: none;
+}
+
+.TodoForm {
+    height: 52px;
+    margin: 0 auto;
+    width: 250px;
+}
+
+.TodoInput {
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    width: 200px;
+}
+.number {
+    color: red;
 }
